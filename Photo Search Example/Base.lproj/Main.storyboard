@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photo_Search_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zP2-xI-cqE">
+                                <rect key="frame" x="0.0" y="72" width="375" height="596"/>
+                            </scrollView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="I3e-Zo-SaB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eLs-TY-iuY"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I3e-Zo-SaB" secondAttribute="trailing" id="JJY-y1-woc"/>
+                            <constraint firstItem="I3e-Zo-SaB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UbV-j3-pfe"/>
+                            <constraint firstItem="I3e-Zo-SaB" firstAttribute="trailing" secondItem="zP2-xI-cqE" secondAttribute="trailing" id="W4e-eh-dYN"/>
+                            <constraint firstItem="zP2-xI-cqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="gRd-zt-hPz"/>
+                            <constraint firstItem="I3e-Zo-SaB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rJt-jY-8eI"/>
+                            <constraint firstItem="I3e-Zo-SaB" firstAttribute="leading" secondItem="zP2-xI-cqE" secondAttribute="leading" id="sSl-bz-fOE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zP2-xI-cqE" secondAttribute="bottom" constant="-1" id="sj7-GS-jwk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="zP2-xI-cqE" id="RdR-96-Hui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
